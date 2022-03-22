@@ -6,6 +6,7 @@ export default function SideBar() {
         <div className="container">
             <div className="row">
                 <div className="col-3">
+                    
                     <li>My Day</li>
                     <li>Important</li>
                     <li>Planned</li>
