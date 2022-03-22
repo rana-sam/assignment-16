@@ -6,13 +6,13 @@ export default function SideBar() {
         <div className="container">
             <div className="row">
                 <div className="col-3">
-                    
-                    <li>My Day</li>
+
+                    {/* <li>My Day</li>
                     <li>Important</li>
                     <li>Planned</li>
                     <li>Assignment to me</li>
                     <li>flaged Email</li>
-                    <li>tasks</li>
+                    <li>tasks</li> */}
                 </div>
                 <div className="col-3"></div>
                 <div className="col-3"></div>
