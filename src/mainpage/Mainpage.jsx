@@ -1,8 +1,19 @@
-import React from "react";
+import React ,{useState} from "react";
+import Checkbutton from "../component/checkbutton/Checkbutton";
+import InputCard from "../component/inputcard/InputCard";
 import RightSideBar from "../rightsidebar/RightSideBar";
 import Sidebar from "../sidebar/Sidebar";
 import "./MainpageStyle.css";
 export default function Mainpage() {
+  const onclickHandler = ()=>{
+    <InputCard icon={<Checkbutton/>} text={onchange} icon2={<i class="bi bi-star"></i>}/>
+  }
+  const onchangehandle = (e)=>{
+    setonchange(e.target.value);
+  }
+  const [onchange, setonchange] = useState()
+
+
   return (
     <div>
       <div className="fluid-container ">
@@ -21,18 +32,18 @@ export default function Mainpage() {
                       data-bs-placement="top"
                       title="Tooltip on top"
                     >
-                      <i class="bi bi-three-dots ms-3 text-dark"></i>
+                      <i className="bi bi-three-dots ms-3 text-dark"></i>
                     </button>
                   </span>
                   <p>Thursday,March 24</p>
                 </div>
                 <div className="d-flex align-items-center">
                   <span className="d-flex">
-                    <i class="bi bi-arrow-down-up ps-2 pe-2"></i>
+                    <i className="bi bi-arrow-down-up ps-2 pe-2"></i>
                     <p>Sort</p>
                   </span>
                   <span className="d-flex">
-                    <i class="bi bi-lightbulb-fill ps-5 pe-2"></i>
+                    <i className="bi bi-lightbulb-fill ps-5 pe-2"></i>
                     <p>Suggestion</p>
                   </span>
                 </div>
@@ -44,10 +55,10 @@ export default function Mainpage() {
                 className="col-12 d-flex align-items-center ms-2 "
                 style={{ backgroundColor: "#e0e0e0" }}
               >
-                <button className="btn text-primary fs-2 ">
-                  <i class="bi bi-plus-lg pe-3"></i>
+                <button className="btn text-primary fs-2 " onClick={onclickHandler}>
+                  <i className="bi bi-plus-lg pe-3"></i>
                 </button>
-                <input
+                <input onChange={onchangehandle}
                   placeholder="Add a Task"
                   type="text"
                   style={{
@@ -59,131 +70,13 @@ export default function Mainpage() {
               </div>
             </div>
             <div className="row d-flex  pt-3 ">
-              <div className="col-12 d-flex justify-content-between">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label lh-1 " for="flexCheckDefault">
-                    <p className="ms-3">
-                      test <br />
-                      <span style={{ color: "#a8a8a8" }}> task</span>
-                    </p>
-                  </label>
-                </div>
-                <button
-                  type="button"
-                  class="btn "
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Mark task as important"
-                >
-                  <i class="bi bi-star"></i>
-                </button>
-              </div>
-            </div>
-            <div
-              className="row  pt-3 d-flex"
-              style={{ backgroundColor: "#c8ecfa" }}
-            >
-              <div className="col-12  d-flex justify-content-between">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label lh-1 " for="flexCheckDefault">
-                    <p className="ms-3 ">
-                      test 3 <br />
-                      <span style={{ color: "#a8a8a8" }}> task</span>
-                    </p>
-                  </label>
-                </div>
-                <button
-                  type="button"
-                  class="btn "
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Mark task as important"
-                >
-                  <i class="bi bi-star"></i>
-                </button>
-              </div>
-            </div>
-            <div className="row ">
-              <div className="col-12 d-flex">
-                <div class="btn-group">
-                  <div class="btn-group">
-                    <button
-                      type="button"
-                      class="btn btn dropdown-toggle dropdown-toggle-split"
-                      id="dropdownMenuButton2"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    ></button>
-                    <ul class="dropdown-menu"></ul>
-                  </div>
-                  <button type="button" class="btn">
-                    complete
-                  </button>
-                  <button className="btn" style={{ color: "#a8a8a8" }}>
-                    1
-                  </button>
-                </div>
-              </div>
+            <InputCard icon={<Checkbutton/>} text="text" icon2={<i class="bi bi-star"></i>}/>
             </div>
             <div className="row d-flex  pt-3 ">
-              <div className="col-12 d-flex justify-content-between">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault"
-                  />
-                  <label class="form-check-label lh-1 " for="flexCheckDefault">
-                    <p className="ms-3">
-                      <span className="text-decoration-line-through">test 2</span><br />
-                      <span style={{ color: "#a8a8a8" }}> task</span>
-                    </p>
-                  </label>
-                </div>
-                <button
-                  type="button"
-                  class="btn "
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="Mark task as important"
-                >
-                  <i class="bi bi-star"></i>
-                </button>
-              </div>
+            <InputCard icon={<Checkbutton/>} text="text2" icon2={<i class="bi bi-star"></i>}/>
             </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
-            </div>
-            <div className="row">
-                <div className="col-12 py-4 border-bottom"></div>
+            <div className="row d-flex  pt-3 text-decoration-line-through ">
+            <InputCard icon={<Checkbutton/>} text="text3" icon2={<i class="bi bi-star"></i>}/>
             </div>
           </div>
 

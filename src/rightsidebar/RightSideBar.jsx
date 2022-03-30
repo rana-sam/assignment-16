@@ -1,4 +1,5 @@
 import React from "react";
+import RightsideCard from "../component/rightsidecard/RightsideCard";
 
 export default function RightSideBar() {
   return (
@@ -28,62 +29,27 @@ export default function RightSideBar() {
         </div>
       </div>
       <div className="row text-primary mt-2">
-        <div className="col-1">
-          <i class="bi bi-plus-lg"></i>
-        </div>
-        <div className="col-10  ms-2 d-flex">Add steps</div>
+        <RightsideCard icon={<i class="bi bi-plus-lg"></i>} title="Add steps"/>
       </div>
-
-      <div className="row text-primary d-flex mt-4 pt-3 border">
-        <div className="col-1">
-          <i class="bi bi-brightness-high"></i>
-        </div>
-        <div className="col-10 d-flex">
-          <p className="ps-2">Add to My Day</p>
-        </div>
+      <div className="row text-primary d-flex mt-4 pb-3 border">
+      <RightsideCard icon={<i class="bi bi-brightness-high"></i>} title="Add to My Day"/>
       </div>
-
         <div className="row pt-3 ">
-            <div className="col-2 d-flex">
-            <i class="bi bi-bell"></i>
-            </div>
-            <div className="col-10 d-flex border-bottom">
-                <p>Remind me</p>
-            </div>
+        <RightsideCard icon={<i class="bi bi-bell"></i>} title="Remind me"/>
         </div>
-        <div className="row pt-3 ">
-            <div className="col-2 d-flex">
-            <i class="bi bi-calendar-minus"></i>
-            </div>
-            <div className="col-10 d-flex border-bottom">
-                <p>Add Due date</p>
-            </div>
+        <div className="row ">
+        <RightsideCard icon={<i class="bi bi-calendar-minus"></i>} title="Add Due date"/>
         </div>
-        <div className="row pt-3 ">
-            <div className="col-2 d-flex">
-            <i class="bi bi-arrow-clockwise"></i>
-            </div>
-            <div className="col-10 d-flex border-bottom">
-                <p>Reapete</p>
-            </div>
+        <div className="row ">
+        <RightsideCard icon={<i class="bi bi-arrow-clockwise"></i>} title="Reapete"/>
         </div>
 
 
-        <div className="row mt-4 pt-3 border">
-            <div className="col-2 d-flex">
-            <i class="bi bi-tag" style={{transform:"rotate(90deg)"}}></i>
-            </div>
-            <div className="col-10 d-flex">
-                <p>Pick a Category</p>
-            </div>
+        <div className="row mt-4 pb-3 border">
+        <RightsideCard icon={<i class="bi bi-tag" style={{transform:"rotate(90deg)"}}></i>} title="Pick a Category"/>
         </div>
-        <div className="row mt-4 pt-3 border">
-            <div className="col-2 d-flex">
-            <i class="bi bi-link"style={{transform:"rotate(90deg)"}}></i>
-            </div>
-            <div className="col-10 d-flex">
-                <p>Add a File</p>
-            </div>
+        <div className="row mt-4 pb-3 border">
+        <RightsideCard icon={<i class="bi bi-link"style={{transform:"rotate(90deg)"}}></i>} title="Add a File"/>
         </div>
 
         <div className="row">
