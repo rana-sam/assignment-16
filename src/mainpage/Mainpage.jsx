@@ -4,21 +4,36 @@ import InputCard from "../component/inputcard/InputCard";
 import RightSideBar from "../rightsidebar/RightSideBar";
 import Sidebar from "../sidebar/Sidebar";
 import "./MainpageStyle.css";
+
+
 export default function Mainpage() {
+  const [onchange, setonchange] = useState()
+  const [data, setData]= useState([]);
+
+
+
+
+
   const onclickHandler = ()=>{
-    <InputCard icon={<Checkbutton/>} text={onchange} icon2={<i class="bi bi-star"></i>}/>
+    // <InputCard icon={<Checkbutton/>} text={onchange} icon2={<i class="bi bi-star"></i>}/>
+
+    setData([...data,onchange]);
+
+
+    setonchange('')
+
+
   }
   const onchangehandle = (e)=>{
     setonchange(e.target.value);
   }
-  const [onchange, setonchange] = useState()
 
 
   return (
     <div>
       <div className="fluid-container ">
         <div className="row">
-          <div className="col-3"><Sidebar/></div>
+          <div className="col-3"><Sidebar num={data.length}/></div>
 
           <div className="col-6 d-flex flex-column mt-4">
             <div className="row ">
@@ -59,6 +74,7 @@ export default function Mainpage() {
                   <i className="bi bi-plus-lg pe-3"></i>
                 </button>
                 <input onChange={onchangehandle}
+                value={onchange}
                   placeholder="Add a Task"
                   type="text"
                   style={{
@@ -69,15 +85,24 @@ export default function Mainpage() {
                 />
               </div>
             </div>
-            <div className="row d-flex  pt-3 ">
-            <InputCard icon={<Checkbutton/>} text="text" icon2={<i class="bi bi-star"></i>}/>
+
+            <div>
+
+              {data.map((items, key)=>{
+                return(
+
+                  <div className="row d-flex  pt-3 " key={key}>
+                  <InputCard icon={<Checkbutton/>} text={items} icon2={<i class="bi bi-star"></i>}/>
+                  </div>
+
+                )
+              })}
+            
+
             </div>
-            <div className="row d-flex  pt-3 ">
-            <InputCard icon={<Checkbutton/>} text="text2" icon2={<i class="bi bi-star"></i>}/>
-            </div>
-            <div className="row d-flex  pt-3 text-decoration-line-through ">
-            <InputCard icon={<Checkbutton/>} text="text3" icon2={<i class="bi bi-star"></i>}/>
-            </div>
+            
+            
+            
           </div>
 
           <div className="col-3">

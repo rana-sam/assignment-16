@@ -1,14 +1,14 @@
 import React from "react";
 import SidebarCard from "../component/sidebarcard/SidebarCard";
 
-export default function Sidebar() {
+export default function Sidebar(props) {
   return (
     <div className="container mt-5" style={{ backgroundColo: "#c9c7c7" }}>
       <div className="row">
         <SidebarCard
           img={<i class="bi bi-brightness-high"></i>}
           heading="My Day"
-          num="2"
+          num={props.num}
         />
       </div>
       <div className="row">
