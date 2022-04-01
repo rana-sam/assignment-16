@@ -43,7 +43,7 @@ export default function Sidebar(props) {
           <SidebarCard
             img={<i class="bi bi-house"></i>}
             heading="Tasks"
-            num="16"
+            num={props.num}
           />
         </div>
         <div className="row mt-4 text-primary">
