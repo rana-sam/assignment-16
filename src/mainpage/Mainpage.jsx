@@ -1,39 +1,32 @@
-import React ,{useState} from "react";
+import React, { useState } from "react";
 import Checkbutton from "../component/checkbutton/Checkbutton";
 import InputCard from "../component/inputcard/InputCard";
 import RightSideBar from "../rightsidebar/RightSideBar";
 import Sidebar from "../sidebar/Sidebar";
 import "./MainpageStyle.css";
 
-
 export default function Mainpage() {
-  const [onchange, setonchange] = useState()
-  const [data, setData]= useState([]);
+  const [onchange, setonchange] = useState();
+  const [data, setData] = useState([]);
 
-
-
-
-
-  const onclickHandler = ()=>{
+  const onclickHandler = () => {
     // <InputCard icon={<Checkbutton/>} text={onchange} icon2={<i class="bi bi-star"></i>}/>
 
-    setData([...data,onchange]);
+    setData([...data, onchange]);
 
-
-    setonchange('')
-
-
-  }
-  const onchangehandle = (e)=>{
+    setonchange("");
+  };
+  const onchangehandle = (e) => {
     setonchange(e.target.value);
-  }
-
+  };
 
   return (
     <div>
       <div className="fluid-container ">
         <div className="row">
-          <div className="col-3"><Sidebar num={data.length}/></div>
+          <div className="col-3">
+            <Sidebar num={data.length} />
+          </div>
 
           <div className="col-6 d-flex flex-column mt-4">
             <div className="row ">
@@ -70,11 +63,15 @@ export default function Mainpage() {
                 className="col-12 d-flex align-items-center ms-2 "
                 style={{ backgroundColor: "#e0e0e0" }}
               >
-                <button className="btn text-primary fs-2 " onClick={onclickHandler}>
+                <button
+                  className="btn text-primary fs-2 "
+                  onClick={onclickHandler}
+                >
                   <i className="bi bi-plus-lg pe-3"></i>
                 </button>
-                <input onChange={onchangehandle}
-                value={onchange}
+                <input
+                  onChange={onchangehandle}
+                  value={onchange}
                   placeholder="Add a Task"
                   type="text"
                   style={{
@@ -87,26 +84,22 @@ export default function Mainpage() {
             </div>
 
             <div>
-
-              {data.map((items, key)=>{
-                return(
-
+              {data.map((items, key) => {
+                return (
                   <div className="row d-flex  pt-3 " key={key}>
-                  <InputCard icon={<Checkbutton/>} text={items} icon2={<i class="bi bi-star"></i>}/>
+                    <InputCard
+                      icon={<Checkbutton />}
+                      text={items}
+                      icon2={<i class="bi bi-star"></i>}
+                    />
                   </div>
-
-                )
+                );
               })}
-            
-
             </div>
-            
-            
-            
           </div>
 
           <div className="col-3">
-             <RightSideBar/> 
+            <RightSideBar />
           </div>
         </div>
       </div>
