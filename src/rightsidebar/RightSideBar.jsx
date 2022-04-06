@@ -29,34 +29,58 @@ export default function RightSideBar() {
         </div>
       </div>
       <div className="row text-primary mt-2">
-        <RightsideCard icon={<i class="bi bi-plus-lg"></i>} title="Add steps"/>
+        <RightsideCard icon={<i class="bi bi-plus-lg"></i>} title="Add steps" />
       </div>
       <div className="row text-primary d-flex mt-4 pb-3 border">
-      <RightsideCard icon={<i class="bi bi-brightness-high"></i>} title="Add to My Day"/>
+        <RightsideCard
+          icon={<i class="bi bi-brightness-high"></i>}
+          title="Add to My Day"
+        />
       </div>
-        <div className="row pt-3 ">
-        <RightsideCard icon={<i class="bi bi-bell"></i>} title="Remind me"/>
-        </div>
-        <div className="row ">
-        <RightsideCard icon={<i class="bi bi-calendar-minus"></i>} title="Add Due date"/>
-        </div>
-        <div className="row ">
-        <RightsideCard icon={<i class="bi bi-arrow-clockwise"></i>} title="Reapete"/>
-        </div>
+      <div className="row pt-3 ">
+        <RightsideCard icon={<i class="bi bi-bell"></i>} title="Remind me" />
+      </div>
+      <div className="row ">
+        <RightsideCard
+          icon={<i class="bi bi-calendar-minus"></i>}
+          title="Add Due date"
+        />
+      </div>
+      <div className="row ">
+        <RightsideCard
+          icon={<i class="bi bi-arrow-clockwise"></i>}
+          title="Reapete"
+        />
+      </div>
 
+      <div className="row mt-4 pb-3 border">
+        <RightsideCard
+          icon={
+            <i class="bi bi-tag" style={{ transform: "rotate(90deg)" }}></i>
+          }
+          title="Pick a Category"
+        />
+      </div>
+      <div className="row mt-4 pb-3 border">
+        <RightsideCard
+          icon={
+            <i class="bi bi-link" style={{ transform: "rotate(90deg)" }}></i>
+          }
+          title="Add a File"
+        />
+      </div>
 
-        <div className="row mt-4 pb-3 border">
-        <RightsideCard icon={<i class="bi bi-tag" style={{transform:"rotate(90deg)"}}></i>} title="Pick a Category"/>
+      <div className="row">
+        <div className="col-12 mt-3">
+          <textarea
+            placeholder="Add Note"
+            name=""
+            id=""
+            cols="40"
+            rows="3"
+          ></textarea>
         </div>
-        <div className="row mt-4 pb-3 border">
-        <RightsideCard icon={<i class="bi bi-link"style={{transform:"rotate(90deg)"}}></i>} title="Add a File"/>
-        </div>
-
-        <div className="row">
-            <div className="col-12 mt-3"><textarea placeholder="Add Note" name="" id="" cols="40" rows="3"></textarea></div>
-        </div>
-
-      
+      </div>
     </div>
   );
 }
